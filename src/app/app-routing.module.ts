@@ -10,6 +10,18 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'list-equipe',
+    loadChildren: () => import('./list-equipe/list-equipe.module').then( m => m.ListEquipePageModule)
+  },
+  {
+    path: 'ajout-equipe',
+    loadChildren: () => import('./ajout-equipe/ajout-equipe.module').then( m => m.AjoutEquipePageModule)
+  },
+  {
+    path: 'modif-equipe',
+    loadChildren: () => import('./modif-equipe/modif-equipe.module').then( m => m.ModifEquipePageModule)
   }
 ];
 

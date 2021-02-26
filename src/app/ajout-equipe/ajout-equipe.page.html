@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>AJOUTER Equipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-item>
+      <ion-label>ID:</ion-label>
+      <ion-input type="number" [(ngModel)]="id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Equipe:</ion-label>
+      <ion-input type="text" [(ngModel)]="equipe"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Country:</ion-label>
+      <ion-input type="text" [(ngModel)]="country"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button class="btn btn-primary" (click)="envoyer()">Envoyer</button>
+    </ion-item>
+  </ion-card>
+  
+</ion-content>
