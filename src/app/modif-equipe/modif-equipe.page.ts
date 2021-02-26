@@ -17,20 +17,19 @@ export class ModifEquipePage implements OnInit {
 
   ngOnInit() {
     this.fromLisTeam = this.service.getTeam();
-    this.id = this.fromLisTeam.id;
-    this.name = this.fromLisTeam.name;
-    this.country = this.fromLisTeam.country;
+    
   }
 
   update() {
     this.fromLisTeam = this.service.getTeam();
 
     if (this.fromLisTeam.id != 0 && this.fromLisTeam.id != null) {
+      this.fromLisTeam.id= Number (this.id);
+      this.fromLisTeam.name= this.name;
+      this.fromLisTeam.country= this.country;
       console.log(this.fromLisTeam);
       this.service.putData(this.fromLisTeam.id, this.fromLisTeam).subscribe();
-      this.fromLisTeam.id = 0;
-      this.fromLisTeam.name = '';
-      this.fromLisTeam.country = '';
+
       alert('modification effectué');
       this.router.navigate(['/list-equipe']);
     }
